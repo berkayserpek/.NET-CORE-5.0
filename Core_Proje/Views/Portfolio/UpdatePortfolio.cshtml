@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.Portfolio
+
+@{
+    ViewData["Title"] = "UpdatePortfolio";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+<div class="card-header border-0">
+    <h3 class="mb-0">Proje Güncelleme Sayfası</h3>
+</div>
+
+@using (Html.BeginForm("UpdatePortfolio", "Portfolio", FormMethod.Post))
+{
+<form class="form-group" method="post">
+    @Html.HiddenFor(x => x.PortfolioID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek İsmi")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek Görsel 1")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek Görsel 2")
+    @Html.TextBoxFor(x => x.ImageUrl2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek URL")
+    @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek Ücreti")
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    <label>Değer</label>
+    @Html.Label("Yetenek Tamamlanma Oranı")
+    @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+}
+
+
+

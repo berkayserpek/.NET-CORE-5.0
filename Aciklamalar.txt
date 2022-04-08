@@ -1,0 +1,9 @@
+1-Katmanlar oluþturuldu.
+2-Entity'ler tanýmlandý.
+3-Paketler kuruldu her bir katman için. Tools, design, ef core, sql server.
+4-DAL'a context sýnýfý kuruldu. Sql baðlantýsý yapýldý. DBSet'ler oluþturuldu.
+5-Migration oluþturuldu ve update database yapýldý.
+6-interfaceler ve generic interface'si oluþturuldu. CRUD metotlarý tanýmlandý. Entity interface'lerine igeneric interfacesi verildi.
+7-Generic repository'e igeneric verildi ve metotlarýn içi yazýldý.
+8-BL katmanýnda concrete ve abstract sýnýflar oluþturuldu. Generic servisler miras verildi ve uygulandý.
+9-Viewcomponents yapýsý oluþturuldu. Burayý tekrar etmen gerekiyor.
