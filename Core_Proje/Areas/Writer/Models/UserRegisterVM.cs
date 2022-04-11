@@ -8,6 +8,12 @@ namespace Core_Proje.Areas.Writer.Models
 {
     public class UserRegisterVM
     {
+        [Required(ErrorMessage = "Lütfen Adınızı Girin")]
+        public string Name { get; set; }
+        [Required(ErrorMessage = "Lütfen Fotoğraf Yolu Girin")]
+        public string ImageURL { get; set; }
+        [Required(ErrorMessage = "Lütfen Soyadınızı Girin")]
+        public string Surname { get; set; }
         [Required(ErrorMessage = "Lütfen Kullanıcı Adı Girin")]
         public string UserName { get; set; }
         [Required(ErrorMessage = "Lütfen Şifre Girin")]
