@@ -1,0 +1,86 @@
+﻿@model Core_Proje.Areas.Writer.Models.UserUpdateVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+<head>
+    <script src="https://kit.fontawesome.com/d0b9bbbdf0.js" crossorigin="anonymous"></script>
+</head>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Profil Bilgileri</h4>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputName1">Ad</label>
+                    <input type="text" asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Adınız">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Soyad</label>
+                    <input type="text" asp-for="Surname" class="form-control" id="exampleInputName1" placeholder="Soyadınız">
+                </div>
+                @*<div class="form-group">
+                    <label for="exampleInputName1">Mail Adresi</label>
+                    <input type="text" name="@Model.Email" value="@Model.Email" disabled class="form-control" id="exampleInputName1" placeholder="Soyadınız">
+                    <span>Mail adresi değiştirilemez.</span>
+                </div>*@
+                <div class="passwordtext">
+                    <div class="form-group col-6">
+                        <label for="exampleInputPassword4">Şifre</label>
+                        <input type="password" name="password" autocomplete="current-password" class="form-control" id="id_password">
+                        <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="exampleInputName1">Şifre tekrar</label>
+                        <input type="password" name="password" autocomplete="current-password" class="form-control" id="id_password1">
+                        <i class="far fa-eye" id="togglePassword1" style="margin-left: -30px; cursor: pointer;"></i>
+                    </div>
+                </div>
+                @*<div class="form-group">
+            <label for="exampleSelectGender">Gender</label>
+            <select class="form-control" id="exampleSelectGender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>*@
+                <div class="form-group">
+                    <label>Fotoğraf Yükle</label>
+                    <input type="file" asp-for="Image">
+                    @*<div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Fotoğraf yükle">
+                        <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-primary" type="button">Seç</button>
+                        </span>
+                    </div>*@
+                </div>
+                @*<div class="form-group">
+            <label for="exampleInputCity1">City</label>
+            <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+        </div>*@
+
+                <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                <button class="btn btn-light">Geri Dön</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .passwordtext{
+        display:flex;
+    }
+    .field-icon {
+        float: right;
+        margin-left: -25px;
+        margin-top: -25px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .container {
+        padding-top: 50px;
+        margin: auto;
+    }
+</style>
+
+<script src="~/Content/showPassword.js"></script>

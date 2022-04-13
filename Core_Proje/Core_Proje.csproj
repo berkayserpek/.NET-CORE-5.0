@@ -93,6 +93,7 @@
     <None Include="wwwroot\argon-dashboard-master\assets\vendor\gulp-copy\node_modules\yargs\lib\validation.js" />
     <None Include="wwwroot\argon-dashboard-master\assets\vendor\gulp-copy\node_modules\yargs\lib\yerror.js" />
     <None Include="wwwroot\argon-dashboard-master\assets\vendor\gulp-copy\node_modules\yargs\yargs.js" />
+    <None Include="wwwroot\Content\showPassword.js" />
     <None Include="wwwroot\skydash\.git\COMMIT_EDITMSG" />
     <None Include="wwwroot\skydash\.git\config" />
     <None Include="wwwroot\skydash\.git\description" />
@@ -2017,6 +2018,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Writer\Data\" />
+    <Folder Include="wwwroot\Uploads\" />
     <Folder Include="wwwroot\skydash\.git\objects\info\" />
     <Folder Include="wwwroot\skydash\.git\objects\pack\" />
     <Folder Include="wwwroot\skydash\.git\refs\tags\" />
