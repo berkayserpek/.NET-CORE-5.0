@@ -18,13 +18,14 @@ namespace Core_Proje.Areas.Writer.Controllers
         {
             _signInManager = signInManager;
         }
+        
         [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(UserLoginVM userLoginVM)
+        public async Task<IActionResult> Index(UserLoginVM userLoginVM)
         {
             if (ModelState.IsValid)
             {
