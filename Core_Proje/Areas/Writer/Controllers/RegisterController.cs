@@ -37,16 +37,20 @@ namespace Core_Proje.Areas.Writer.Controllers
                     UserName = userRegisterVM.UserName,
                     ImageURL = userRegisterVM.ImageURL
                 };
-                var result = await _userManager.CreateAsync(writerUser, userRegisterVM.Password);
-                if (result.Succeeded)
+                if (userRegisterVM.Password == userRegisterVM.ConfirmPassword)
                 {
-                    return RedirectToAction("Index", "Login");
-                }
-                else
-                {
-                    foreach (var item in result.Errors)
+                    var result = await _userManager.CreateAsync(writerUser, userRegisterVM.Password);
+
+                    if (result.Succeeded)
                     {
-                        ModelState.AddModelError("", item.Description);
+                        return RedirectToAction("Index", "Register");
+                    }
+                    else
+                    {
+                        foreach (var item in result.Errors)
+                        {
+                            ModelState.AddModelError("", item.Description);
+                        }
                     }
                 }
             }
