@@ -27,9 +27,11 @@ namespace Core_Proje.Areas.Writer.Controllers
 
             //weather api
             string api = "77952cc031594a8bdddf06c7380d3051";
-            string connection = "https://api.openweathermap.org/data/2.5/weather?q=istanbul&appid=" + api;
+            string connection = "https://api.weatherapi.com/v1/current.xml?key=e25a908663a24fb4b33183842221304&q=Eregli&aqi=yes";
             XDocument document = XDocument.Load(connection);
-            ViewBag.weather = document.Descendants("coord").ElementAt(0).Attribute("lon").Value;
+            ViewBag.weather = document.Descendants("temp_c").ElementAt(0).Value;
+            ViewBag.City = document.Descendants("name").ElementAt(0).Value;
+            ViewBag.Region = document.Descendants("region").ElementAt(0).Value;
 
             //Statistics
             Context c = new Context();
