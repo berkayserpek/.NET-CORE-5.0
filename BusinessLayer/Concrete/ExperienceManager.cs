@@ -36,6 +36,11 @@ namespace BusinessLayer.Concrete
             return _experienceDAL.GetList();
         }
 
+        public List<Experience> TGetListByWhere(string p)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(Experience t)
         {
             _experienceDAL.Update(t);

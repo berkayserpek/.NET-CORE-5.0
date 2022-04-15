@@ -37,7 +37,10 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
-
+        public List<WriterMessage> TGetListByWhere(string p)
+        {
+            return _writerMessageDAL.GetByWhere(x => x.Receiver == p);
+        }
         public void TUpdate(WriterMessage t)
         {
             throw new NotImplementedException();

@@ -43,6 +43,11 @@ namespace BusinessLayer.Concrete
             return userMessageDAL.GetList();
         }
 
+        public List<UserMessage> TGetListByWhere(string p)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(UserMessage t)
         {
             throw new NotImplementedException();

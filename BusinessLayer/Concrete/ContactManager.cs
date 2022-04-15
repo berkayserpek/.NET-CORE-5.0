@@ -38,7 +38,7 @@ namespace BusinessLayer.Concrete
             return _contactDAL.GetList();
         }
 
-        public List<Contact> TGetListByWhere()
+        public List<Contact> TGetListByWhere(string p)
         {
             throw new NotImplementedException();
         }

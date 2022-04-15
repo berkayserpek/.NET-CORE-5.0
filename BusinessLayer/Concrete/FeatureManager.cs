@@ -36,6 +36,11 @@ namespace BusinessLayer.Concrete
             return _featureDAL.GetList();
         }
 
+        public List<Feature> TGetListByWhere(string p)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(Feature t)
         {
             _featureDAL.Update(t);

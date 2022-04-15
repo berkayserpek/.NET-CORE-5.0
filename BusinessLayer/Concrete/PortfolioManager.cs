@@ -36,6 +36,11 @@ namespace BusinessLayer.Concrete
             return _portfolioDAL.GetList();
         }
 
+        public List<Portfolio> TGetListByWhere(string p)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(Portfolio t)
         {
             _portfolioDAL.Update(t);

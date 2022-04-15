@@ -41,7 +41,7 @@ namespace BusinessLayer.Concrete
             _aboutDAL.Update(t);
         }
 
-        public List<About> TGetListByWhere()
+        public List<About> TGetListByWhere(string p)
         {
             throw new NotImplementedException();
         }
