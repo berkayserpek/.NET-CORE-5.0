@@ -9,41 +9,36 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class ContactManager : IContactService
+    public class WriterMessageManager : IWriterMessageService
     {
-        IContactDAL _contactDAL;
+        IWriterMessageDAL _writerMessageDAL;
 
-        public ContactManager(IContactDAL contactDAL)
+        public WriterMessageManager(IWriterMessageDAL writerMessageDAL)
         {
-            _contactDAL = contactDAL;
+            _writerMessageDAL = writerMessageDAL;
         }
 
-        public void TAdd(Contact t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void TDelete(Contact t)
+        public void TAdd(WriterMessage t)
         {
             throw new NotImplementedException();
         }
 
-        public Contact TGetByID(int id)
+        public void TDelete(WriterMessage t)
         {
             throw new NotImplementedException();
         }
 
-        public List<Contact> TGetList()
-        {
-            return _contactDAL.GetList();
-        }
-
-        public List<Contact> TGetListByWhere()
+        public WriterMessage TGetByID(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void TUpdate(Contact t)
+        public List<WriterMessage> TGetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(WriterMessage t)
         {
             throw new NotImplementedException();
         }

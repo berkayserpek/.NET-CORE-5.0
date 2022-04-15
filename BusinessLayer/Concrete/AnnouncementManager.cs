@@ -38,6 +38,11 @@ namespace BusinessLayer.Concrete
             return announcementDAL.GetList();
         }
 
+        public List<Announcement> TGetListByWhere()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(Announcement t)
         {
             throw new NotImplementedException();
