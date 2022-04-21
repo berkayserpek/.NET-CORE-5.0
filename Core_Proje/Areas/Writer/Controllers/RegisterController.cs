@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Core_Proje.Areas.Writer.Controllers
 {
+    [Route("Writer/[controller]/[action]")]
     public class RegisterController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
@@ -43,7 +44,7 @@ namespace Core_Proje.Areas.Writer.Controllers
 
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("Index", "Register");
+                        return RedirectToAction("Index", "Login");
                     }
                     else
                     {
