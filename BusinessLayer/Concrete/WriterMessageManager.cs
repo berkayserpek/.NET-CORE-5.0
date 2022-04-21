@@ -18,9 +18,19 @@ namespace BusinessLayer.Concrete
             _writerMessageDAL = writerMessageDAL;
         }
 
+        public List<WriterMessage> GetListReceiverMessage(string p)
+        {
+            return _writerMessageDAL.GetByWhere(x => x.Receiver == p);
+        }
+
+        public List<WriterMessage> GetListSenderMessage(string p)
+        {
+            return _writerMessageDAL.GetByWhere(x => x.Sender == p);
+        }
+
         public void TAdd(WriterMessage t)
         {
-            throw new NotImplementedException();
+            _writerMessageDAL.Insert(t);
         }
 
         public void TDelete(WriterMessage t)
@@ -30,16 +40,17 @@ namespace BusinessLayer.Concrete
 
         public WriterMessage TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _writerMessageDAL.GetByID(id);
         }
 
         public List<WriterMessage> TGetList()
         {
             throw new NotImplementedException();
         }
+
         public List<WriterMessage> TGetListByWhere(string p)
         {
-            return _writerMessageDAL.GetByWhere(x => x.Receiver == p);
+            throw new NotImplementedException();
         }
         public void TUpdate(WriterMessage t)
         {
