@@ -14,18 +14,12 @@ namespace Core_Proje.Controllers
         ExperienceManager experienceManager = new ExperienceManager(new EFExperienceDAL());
         public IActionResult Index()
         {
-            ViewBag.v1 = "Tecrübe Listesi";
-            ViewBag.v2 = "Tecrübeler";
-            ViewBag.v3 = "Tecrübe Listesi";
             var values = experienceManager.TGetList();
             return View(values);
         }
         [HttpGet]
         public IActionResult AddExperience()
         {
-            ViewBag.v1 = "Tecrübe Ekle";
-            ViewBag.v2 = "Tecrübeler";
-            ViewBag.v3 = "Tecrübe Ekle";
             return View();
         }
         [HttpPost]
