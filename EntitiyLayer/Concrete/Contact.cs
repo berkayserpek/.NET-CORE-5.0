@@ -15,5 +15,6 @@ namespace EntityLayer.Concrete
         public string Description { get; set; }
         public string Mail { get; set; }
         public string PhoneNumber { get; set; }
+        public DateTime ModifiedDate { get; set; }
     }
 }
